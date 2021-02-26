@@ -17,6 +17,8 @@ def revers(num):
 
 first_revers = revers(first_num)
 second_revers = revers(second_num)
+# TODO: ide по прежнему не в восторге  от нейминга;)
 summ = float(first_revers) + float(second_revers)
 
+# TODO: По прежнему нет ОДНОЙ пустой строки в конце файла:(
 print('Первое число наоборот:', first_revers, '\nВторое число наоборот:', second_revers, '\nСумма:', summ)

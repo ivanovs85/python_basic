@@ -26,4 +26,5 @@ for year in range(first_year, second_year + 1):
     count_first = 0
     count_second = 0
     num_first = 0
+    # TODO: Не хватает пустой строки в конце файла;)
     num_second = 0
