@@ -4,6 +4,6 @@ num = int(input('Введите число: '))
 # TODO: 1) ide подсказывает, что в слове ниже у вас опечатка
 #  2) В конце файла должна быть ОДНА пустая строка
 for divider in range(2, num + 1):
-    if num % devider == 0:
+    if num % divider == 0:
         break
 print('Наименьший делитель, отличный от еденицы:', divider)
