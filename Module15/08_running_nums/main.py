@@ -18,3 +18,5 @@ for i in num_list:
         new_num_list[shift + count] = i
 
 print('Сдвинутый список:  ', new_num_list)
+
+# зачёт!

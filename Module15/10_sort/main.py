@@ -15,3 +15,5 @@ for _ in range(5):
             list_num[i + 1] = temp
 
 print(list_num)
+
+# зачёт!

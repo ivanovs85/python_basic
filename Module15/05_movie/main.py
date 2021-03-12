@@ -20,3 +20,5 @@ print('\nСписок любимых фильмов:', end=' ')
 
 for i in films_favorite:
     print(i, end=' ')
+
+# зачёт!

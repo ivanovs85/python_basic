@@ -43,3 +43,5 @@ for weight in container_weight_list:
         break
 
 print('Номер, куда встанет новый контейнер:', num_container)
+
+# зачёт!

@@ -6,3 +6,5 @@ for index in range(len(list_participants)):
         new_list.append(list_participants[index])
 
 print(new_list)
+
+# зачёт!
