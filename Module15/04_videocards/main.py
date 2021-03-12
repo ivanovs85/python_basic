@@ -15,3 +15,5 @@ for card in card_list:
         new_card_list.append(card)
 
 print('Старый список видеокарт:', card_list, '\nНовый список видеокарт:', new_card_list)
+
+# зачёт!

@@ -11,3 +11,5 @@ print('Неподходящие значения: ', end='')
 
 for i in unsuitable_list:
     print(i, end=' ')
+
+# зачёт!

@@ -10,10 +10,11 @@ for index in range(len(word_list)):
             word_list[index] = 0
             word_list[index_repeat] = 0
 
-
 print(word_list)
 for sym in word_list:
     if sym != 0:
         count += 1
 
 print('Количество уникальных букв:', count)
+
+# зачёт!

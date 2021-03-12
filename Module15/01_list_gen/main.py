@@ -6,3 +6,5 @@ for i in range(1, num + 1):
         odd_num.append(i)
 
 print(odd_num)
+
+# зачёт!
