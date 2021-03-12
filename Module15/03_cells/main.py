@@ -1,14 +1,10 @@
 cell = int(input('Введите количество клеток: '))
 unsuitable_list = []
 
-
-# TODO, как реализовать range таким образом, чтобы не производить в цикле вычисления (+1) с переменной цикла?
-#  В таком случае, вычисление произойдёт только 1 раз в range, вместо вычислений каждую итерацию цикла.
-
-for rank in range(cell):
-    print('Эффективность', rank + 1, 'клетки: ', end='')
+for rank in range(1, cell + 1):
+    print('Эффективность', rank, 'клетки: ', end='')
     efficiency = int(input())
-    if efficiency < rank + 1:
+    if efficiency < rank:
         unsuitable_list.append(efficiency)
 
 print('Неподходящие значения: ', end='')
