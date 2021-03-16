@@ -6,10 +6,9 @@ detail = input('Название детали: ')
 count_detail = 0
 total_price = 0
 
-# TODO: Предлагаю проходиться сразу по списку shop:)
-for index in range(len(shop)):
-    if shop[index][0] == detail:
+for price in shop:
+    if price[0] == detail:
         count_detail += 1
-        total_price += shop[index][1]
+        total_price += price[1]
 
 print('Кол-во деталей -', count_detail, '\nОбщая стоимость -', total_price)
