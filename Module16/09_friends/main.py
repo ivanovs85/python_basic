@@ -10,10 +10,9 @@ for i_rect in range(1, rect + 1):
     print(i_rect, 'расписка')
     credit_friend = int(input('Кому: '))
     debt_friend = int(input('От кого: '))
-    # TODO: Предлагаю доработать нейминг: имя переменной должно быть английским словом:)
-    summa = int(input('Сколько: '))
-    friends_list[credit_friend - 1] += summa
-    friends_list[debt_friend - 1] -= summa
+    total_sum = int(input('Сколько: '))
+    friends_list[credit_friend - 1] += total_sum
+    friends_list[debt_friend - 1] -= total_sum
 
 print('\nБаланс друзей:')
 for index in range(friends):
