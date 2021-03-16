@@ -1,3 +1,9 @@
+def calculation(size_skate, people):
+    skates_size_list.remove(size_skate)
+    people += 1
+    return people
+
+
 skates = int(input('Кол-во коньков: '))
 skates_size_list = []
 foot_size_list = []
@@ -15,18 +21,13 @@ for count in range(1, peoples + 1):
     foot_size = int(input())
     foot_size_list.append(foot_size)
 
-# Сначало ищем подходящую обувь, и если не найдем, то большего размера. Как нашли удаляем его из списка, чтоб не мешал
-# TODO: Аналогично 1:)
-for i_foot in range(len(foot_size_list)):
-    for i_size in range(len(skates_size_list)):
-        # TODO: Предлагаю подумать как избавиться от дублирования кода:)
-        if foot_size_list[i_foot] == skates_size_list[i_size]:
-            skates_size_list.remove(skates_size_list[i_size])
-            count_people += 1
+for foot in foot_size_list:
+    for size in skates_size_list:
+        if foot == size:
+            count_people = calculation(size, count_people)
             break
-        elif foot_size_list[i_foot] < skates_size_list[i_size]:
-            skates_size_list.remove(skates_size_list[i_size])
-            count_people += 1
+        elif foot < size:
+            count_people = calculation(size, count_people)
             break
 
 print('\nНаибольшее кол-во людей, которые могут взять ролики:', count_people)
