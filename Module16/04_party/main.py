@@ -11,7 +11,6 @@ while True:
     print('\nСейчас на вечеринке', len(guests), 'человек', guests)
     command = input('Гость пришел или ушел? ')
     if command == 'пришел' and len(guests) < 6:
-        # TODO: Для снятия нагрузки с цикла предлагаю действия вынести в отдельные ф-ии:)
         name = input('Имя гостя: ')
         guests.append(name)
         print('Привет,', name + '!')

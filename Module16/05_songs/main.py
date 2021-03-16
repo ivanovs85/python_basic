@@ -16,11 +16,11 @@ song_length = 0.0
 for count in range(1, songs + 1):
     print('Название', count, 'песни:', end=' ')
     # TODO: Хотите научиться писать ткст любой сложности сразу в input?:)
+    #  STD: Не понял что вы имеете ввиду
     name_song = input()
-    # TODO: Аналогично 3:)
-    for index in range(len(violator_songs)):
-        if violator_songs[index][0] == name_song:
-            song_length += violator_songs[index][1]
+    for song in violator_songs:
+        if song[0] == name_song:
+            song_length += song[1]
             break
 
 print('Общее врем звучания песен:', round(song_length, 2), 'минут')
