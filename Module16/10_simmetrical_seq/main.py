@@ -8,6 +8,7 @@ for _ in range(quantity):
 
 print()
 print('Последовательность:', end=' ')
+# TODO: Для получения такого ж результата предлагаю использовать join вместо цикла:)
 for i_elm in num_list:
     print(i_elm, end=' ')
 print()

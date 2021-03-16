@@ -15,7 +15,9 @@ song_length = 0.0
 
 for count in range(1, songs + 1):
     print('Название', count, 'песни:', end=' ')
+    # TODO: Хотите научиться писать ткст любой сложности сразу в input?:)
     name_song = input()
+    # TODO: Аналогично 3:)
     for index in range(len(violator_songs)):
         if violator_songs[index][0] == name_song:
             song_length += violator_songs[index][1]

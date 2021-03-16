@@ -6,6 +6,7 @@ detail = input('Название детали: ')
 count_detail = 0
 total_price = 0
 
+# TODO: Предлагаю проходиться сразу по списку shop:)
 for index in range(len(shop)):
     if shop[index][0] == detail:
         count_detail += 1

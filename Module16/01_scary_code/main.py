@@ -5,6 +5,8 @@ main_list.extend(list_a)
 count_a = 0
 count_b = 0
 
+# TODO: Нейминг вида "i_" больше подходит когда вы перебираете последовательность созданную при помощи range().
+#  Здесь же вполне конкртные элемеенты:)
 for i_elm in main_list:
     if i_elm == 5:
         count_a += 1
