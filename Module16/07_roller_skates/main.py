@@ -23,6 +23,7 @@ for count in range(1, peoples + 1):
 
 for foot in foot_size_list:
     for size in skates_size_list:
+        # TODO: По прежнему предлагаю подумать как избавиться от дублирования ниже:)
         if foot == size:
             count_people = calculation(size, count_people)
             break
