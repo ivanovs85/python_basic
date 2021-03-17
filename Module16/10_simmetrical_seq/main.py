@@ -7,10 +7,7 @@ for _ in range(quantity):
     num_list.append(num)
 
 print()
-print('Последовательность:', end=' ')
-# TODO: Для получения такого ж результата предлагаю использовать join вместо цикла:)
-for i_elm in num_list:
-    print(i_elm, end=' ')
+print('Последовательность:', ' '.join(str(num_list)))
 print()
 
 for elm in range(len(num_list) - 1, -1, -1):
