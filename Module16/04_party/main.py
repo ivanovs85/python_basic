@@ -5,27 +5,35 @@ def is_guest_exist(person, guests_list):
     return False
 
 
+def actions(instructions, friends_list):
+    if instructions == 'пришел' and len(friends_list) < 6:
+        name = input('Имя гостя: ')
+        friends_list.append(name)
+        print('Привет,', name + '!')
+    elif instructions == 'пришел' and len(friends_list) >= 6:
+        name = input('Имя гостя: ')
+        print('Прости,', name, ', но мест нет.')
+    elif instructions == 'ушел':
+        name = input('Имя гостя: ')
+        if is_guest_exist(name, friends_list):
+            print('Пока,', name)
+            friends_list.remove(name)
+        else:
+            print('Гостя с таким именем не было')
+    else:
+        print('Такой команды нету')
+    return friends_list
+
+
 guests = ['Петя', 'Ваня', 'Саша', 'Лиза', 'Катя']
 
 while True:
     print('\nСейчас на вечеринке', len(guests), 'человек', guests)
     command = input('Гость пришел или ушел? ')
-    if command == 'пришел' and len(guests) < 6:
-        name = input('Имя гостя: ')
-        guests.append(name)
-        print('Привет,', name + '!')
-    elif command == 'пришел' and len(guests) >= 6:
-        name = input('Имя гостя: ')
-        print('Прости,', name, ', но мест нет.')
-    elif command == 'ушел':
-        name = input('Имя гостя: ')
-        if is_guest_exist(name, guests):
-            print('Пока,', name)
-            guests.remove(name)
-        else:
-            print('Гостя с таким именем не было')
-    elif command == 'Пора спать':
+    if command == 'пора спать':
         break
     else:
-        print('Такой команды нету')
+        actions(command, guests)
+
+
 print('Вечеринка закончилась, все легли спать')
