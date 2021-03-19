@@ -1,4 +1,5 @@
 # TODO: Можно сделать проще. Просто оберните ваш range(...) в ф-ию list():)
+# я так не умею( Подскажите как это
 def range_class(start, end, step):
     class_list = []
     for pupil in range(start, end, step):

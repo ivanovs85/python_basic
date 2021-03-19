@@ -6,13 +6,13 @@ def is_guest_exist(person, guests_list):
 
 
 def actions(instructions, friends_list):
-    if instructions == 'пришел' and len(friends_list) < 6:
+    if instructions == 'пришел'
         name = input('Имя гостя: ')
-        friends_list.append(name)
-        print('Привет,', name + '!')
-    elif instructions == 'пришел' and len(friends_list) >= 6:
-        name = input('Имя гостя: ')
-        print('Прости,', name, ', но мест нет.')
+        if len(friends_list) < 6:
+            friends_list.append(name)
+            print('Привет,', name + '!')
+        else:
+            print('Прости,', name, ', но мест нет.')
     elif instructions == 'ушел':
         name = input('Имя гостя: ')
         if is_guest_exist(name, friends_list):
