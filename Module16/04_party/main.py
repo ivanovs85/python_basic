@@ -6,7 +6,7 @@ def is_guest_exist(person, guests_list):
 
 
 def actions(instructions, friends_list):
-    if instructions == 'пришел'
+    if instructions == 'пришел':
         name = input('Имя гостя: ')
         if len(friends_list) < 6:
             friends_list.append(name)

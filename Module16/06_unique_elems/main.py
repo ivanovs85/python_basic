@@ -1,23 +1,22 @@
-# TODO: Предлагаю доработать нейминг:)
-list_num_a = []
-list_num_b = []
+first_list = []
+second_list = []
 
-for num_a in range(3):
-    elm = int(input('Введите число первого списка: '))
-    list_num_a.append(elm)
+for _ in range(3):
+    num_first = int(input('Введите число первого списка: '))
+    first_list.append(num_first)
 
-for num_b in range(7):
-    elm = int(input('Введите число второго списка: '))
-    list_num_b.append(elm)
+for _ in range(7):
+    num_second = int(input('Введите число второго списка: '))
+    second_list.append(num_second)
 
-print('Первый список:', list_num_a,
-      '\nВторой список:', list_num_b)
+print('Первый список:', first_list,
+      '\nВторой список:', second_list)
 
-list_num_a.extend(list_num_b)
+first_list.extend(second_list)
 
-for elm in list_num_a:
-    count_elm = list_num_a.count(elm)
+for elm in first_list:
+    count_elm = first_list.count(elm)
     for _ in range(count_elm - 1):
-        list_num_a.remove(elm)
+        first_list.remove(elm)
 
-print('Новый первый список с уникальными элементами:', list_num_a)
+print('Новый первый список с уникальными элементами:', first_list)
