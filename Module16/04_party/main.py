@@ -5,38 +5,36 @@ def is_guest_exist(person, guests_list):
     return False
 
 
-def actions(instructions, friends_list):
-    if instructions == 'пришел':
-        name = input('Имя гостя: ')
-        if len(friends_list) < 6:
-            friends_list.append(name)
-            print('Привет,', name + '!')
-        else:
-            print('Прости,', name, ', но мест нет.')
-    elif instructions == 'ушел':
-        name = input('Имя гостя: ')
-        if is_guest_exist(name, friends_list):
-            print('Пока,', name)
-            friends_list.remove(name)
-        else:
-            print('Гостя с таким именем не было')
+def come(friends):
+    name = input('Имя гостя: ')
+    if len(guests) < 6:
+        friends.append(name)
+        print('Привет,', name + '!')
     else:
-        print('Такой команды нету')
-    return friends_list
+        print('Прости,', name, ', но мест нет.')
+
+
+def gone(friends):
+    name = input('Имя гостя: ')
+    if is_guest_exist(name, friends):
+        print('Пока,', name)
+        friends.remove(name)
+    else:
+        print('Гостя с таким именем не было')
 
 
 guests = ['Петя', 'Ваня', 'Саша', 'Лиза', 'Катя']
 
 while True:
     print('\nСейчас на вечеринке', len(guests), 'человек', guests)
-    command = input('Гость пришел или ушел? ')
-    if command == 'пора спать':
+    instructions = input('Гость пришел или ушел? ')
+    if instructions == 'пришел':
+        come(guests)
+    elif instructions == 'ушел':
+        gone(guests)
+    elif instructions == 'пора спать':
         break
     else:
-        actions(command, guests)
-
+        print('Такой команды нету')
 
 print('Вечеринка закончилась, все легли спать')
-
-# TODO: Не совсем. Если гость пришел, то вызываем ф-ию, отвечающую за уход, а если пришел, то ф-ию, отвечающую за приход
-#  p.s. перед этим нужно избавиться от дублирующихся проверок: в двух местах проверяете пришел ли гость.
