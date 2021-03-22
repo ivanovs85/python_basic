@@ -1,11 +1,6 @@
-# TODO: Можно сделать проще. Просто оберните ваш range(...) в ф-ию list():)
-# я так не умею( Подскажите как это
-# TODO: something_list = list(range(start, end, step))
 def range_class(start, end, step):
-    class_list = []
-    for pupil in range(start, end, step):
-        class_list.append(pupil)
-    return class_list
+    something_list = list(range(start, end, step))
+    return something_list
 
 
 def sorting(sort_list):
@@ -14,6 +9,7 @@ def sorting(sort_list):
             if sort_list[curr] < sort_list[i_mn]:
                 sort_list[curr], sort_list[i_mn] = sort_list[i_mn], sort_list[curr]
     return sort_list
+
 
 CLASS_A_START = 160
 CLASS_A_END = 176
