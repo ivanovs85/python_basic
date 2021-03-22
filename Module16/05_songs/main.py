@@ -16,7 +16,7 @@ song_length = 0.0
 for count in range(1, songs + 1):
     print('Название', count, 'песни:', end=' ')
     # TODO: Хотите научиться писать ткст любой сложности сразу в input?:)
-    #  STD: Не понял что вы имеете ввиду
+    #  STD: Подскажите как, не нашел как это сделать в интеренте. Спасибо
     name_song = input()
     for song in violator_songs:
         if song[0] == name_song:
