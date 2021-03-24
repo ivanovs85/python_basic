@@ -1,3 +1,4 @@
+# TODO: Есть ли необходимость в ф-ии, которая только вызывает другую ф-ию?:)
 def range_class(start, end, step):
     something_list = list(range(start, end, step))
     return something_list
