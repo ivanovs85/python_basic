@@ -14,7 +14,7 @@ songs = int(input('Сколько песен выбрать? '))
 song_length = 0.0
 
 for count in range(1, songs + 1):
-    print('Название', count, 'песни:', end=' ')
+    print()
     # TODO: Хотите научиться писать ткст любой сложности сразу в input?:)
     #  STD: Подскажите как, не нашел как это сделать в интеренте. Спасибо
     # TODO: Можно использовать простую конкатенацию, но этот вариант не очень "профессионален":
@@ -26,7 +26,7 @@ for count in range(1, songs + 1):
     #  name_song = input('Название {} песни: '.format(count))
     #  3) с помощью f-строк:
     #  name_song = input(f'Название {count} песни: ')
-    name_song = input()
+    name_song = input('Название %s песни: ' % (count,))
     for song in violator_songs:
         if song[0] == name_song:
             song_length += song[1]
