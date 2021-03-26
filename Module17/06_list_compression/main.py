@@ -7,6 +7,8 @@ def change(elm, elm_list):
 
 num_list = [2, 0, 3, 1, 0, 5, 0, 3, 1]
 
+# TODO: Обратите внимание что к концу выполнения программы исходный список изменился.
+#  Есть ли смысл тогда заводить new_list?:)
 new_list = [change(i_elm, num_list) for i_elm in range(len(num_list))]
 print('Список с нулями:', new_list)
 

@@ -8,3 +8,4 @@ text = input('Введите текст: ')
 text_list = list(text)
 back_text = cut_text(text_list)[::-1]
 print('Ответ:', ''.join(cut_text(back_text)))
+# TODO: Какой должен быть результат если ввести humanhumanhuman?:)

@@ -8,5 +8,6 @@ def vowels_check(letter):
 text = input('Введите текст: ')
 vowels_list = ['а', 'у', 'о', 'и', 'э', 'ы', 'е', 'я', 'ю']
 
+# TODO: Предлагаю сделать проще: проверяйте символ на вхождение при помощи оператора "in":)
 vowels_sym = [sym for sym in text if vowels_check(sym)]
 print('Список гласных букв:', vowels_sym, '\nДлина списка:', len(vowels_sym))
