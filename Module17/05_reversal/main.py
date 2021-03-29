@@ -1,12 +1,7 @@
-def cut_text(word):
-    find_h = word.index('h')
-    cut = word[find_h::]
-    return cut
-
-
 text = input('Введите текст: ')
-text_list = list(text)
-back_text = cut_text(text_list)[::-1]
-print('Ответ:', ''.join(cut_text(back_text)[1:-1:]))
-# TODO: Какой должен быть результат если ввести humanhumanhuman?:)
-#Думаю должно быть hnamuhnamuh, или h не должен быть включен? Если так, то добавил [1:-1:]
+
+h_init = text.index('h')
+h_end = len(text) - text[::-1].index('h') - 1
+
+print(text[:h_init] + text[h_end:h_init:-1] + text[h_end:])
+
